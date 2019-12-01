@@ -46,7 +46,7 @@ roleRef:
   name: system-psp-role
   apiGroup: rbac.authorization.k8s.io
 subjects:
-  # Authorize all service accounts
+  # Authorize all service accounts in kube-system namespace
   - kind: Group
     apiGroup: rbac.authorization.k8s.io
-    name: system:serviceaccounts
+    name: system:serviceaccounts:kube-system
